@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { motion } from 'framer-motion';
+import { useState } from "react";
 
 export default function SideMenu() {
   const [hoverIndex, setHoverIndex] = useState<number>(-1);
@@ -9,8 +8,6 @@ export default function SideMenu() {
     "Image Editor",
     "Script to Text",
   ];
-
-  useEffect(() => console.log(hoverIndex), [hoverIndex])
 
   const createMenuItem = (label: string, index: number) => {
     return (
@@ -32,7 +29,7 @@ export default function SideMenu() {
       <MenuBackground position={hoverIndex}/>
       <div
         onMouseLeave={() => setHoverIndex(-1)}
-        className="text-6xl text-bold text-left absolute top-[25%] z-2 ml-20 my-auto space-y-4"
+        className="text-6xl text-bold text-left absolute top-[25%] z-10 ml-20 my-auto space-y-4"
       >
         {labels.map((label, i) => createMenuItem(label, i))}
       </div>
@@ -42,18 +39,18 @@ export default function SideMenu() {
 
 function MenuBackground({position} : { position: number }) {
   if (position === 0) {
-    return (<div className="bg-gradient-radial bg-position-0 bg-extend-45 absolute z-1 h-screen w-screen left-0 top-0 transition-all duration-500"></div>)
+    return (<div className="bg-gradient-radial bg-position-0 bg-extend-45 absolute z-9 h-screen w-screen left-0 top-0 transition-all duration-500"></div>)
   }
   else if (position === 1) {
-    return (<div className="bg-gradient-radial bg-position-1 bg-extend-45 absolute z-1 h-screen w-screen left-0 top-0 transition-all duration-500"></div>)
+    return (<div className="bg-gradient-radial bg-position-1 bg-extend-45 absolute z-9 h-screen w-screen left-0 top-0 transition-all duration-500"></div>)
   }
   else if (position === 2) {
-    return (<div className="bg-gradient-radial bg-position-2 bg-extend-45 absolute z-1 h-screen w-screen left-0 top-0 transition-all duration-500"></div>)
+    return (<div className="bg-gradient-radial bg-position-2 bg-extend-45 absolute z-9 h-screen w-screen left-0 top-0 transition-all duration-500"></div>)
   }
   else if (position === 3) {
-    return (<div className="bg-gradient-radial bg-position-3 bg-extend-45 absolute z-1 h-screen w-screen left-0 top-0 transition-all duration-500"></div>)
+    return (<div className="bg-gradient-radial bg-position-3 bg-extend-45 absolute z-9 h-screen w-screen left-0 top-0 transition-all duration-500"></div>)
   }
   else {
-    return (<div className="bg-gradient-radial bg-position-def bg-extend-5 absolute z-1 h-screen w-screen left-0 top-0 transition-all duration-500"></div>)
+    return (<div className="bg-gradient-radial bg-position-def bg-extend-5 absolute z-9 h-screen w-screen left-0 top-0 transition-all duration-500"></div>)
   }
 }

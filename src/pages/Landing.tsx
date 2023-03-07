@@ -1,16 +1,13 @@
-import FramerMotionTest from "../components/FramerMotionTest";
-import NavBar from "../components/NavBar";
-import ProjectCard from "../components/ProjectCard";
-import SideMenu from "../components/SideMenu";
+import { useState } from "react";
+import TypeWriter from "../components/Typewriter";
 
-export default function Landing() {
+export default function LandingPage() {
+  const [showCursor, setShowCursor] = useState(true);
+
   return (
-    <div className="bg-gray-800 min-h-screen pt-12 text-white font-mono">
-      <NavBar />
-      <div className="flex flex-row">
-        <SideMenu />
-        {/* <ProjectCard title="Project Title" /> */}
-        {/* <FramerMotionTest/> */}
+    <div className="bg-gray-800 min-h-screen">
+      <div className="text-5xl absolute top-[45%] left-[10%]">
+        <TypeWriter content="Hi, my name is Sunny" speed={100} showCursor={true}/>
       </div>
     </div>
   );
