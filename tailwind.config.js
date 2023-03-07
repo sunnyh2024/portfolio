@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   content: ["./src/**/*.{html,js,tsx,jsx}"],
   theme: {
     extend: {
@@ -11,16 +12,17 @@ module.exports = {
         'extend-45' : '4.5vmin 4.5vmin'
       },
       backgroundPosition: {
-        'position-def' : '0% -50%',
-        'position-0' : '0% -30%',
-        'position-1' : '0% -40%',
-        'position-2' : '0% -60%',
-        'position-3' : '0% -70%',
+        'position-def' : '0% 0%',
+        'position-0' : '0% -20%',
+        'position-1' : '0% -10%',
+        'position-2' : '0% -10%',
+        'position-3' : '0% -20%',
       },
       transitionDuration: {
         '400' : '400ms',
       },
     },
   },
+  darkMode: 'class',
   plugins: [],
 }
