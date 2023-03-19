@@ -64,12 +64,12 @@ export default function ContactForm() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.75 + index / 4 }}
           >
-            <Button variant="gradient" className="hover:scale-110" onClick={links[index]}>
+            <Button variant="gradient" className="hover:scale-110 p-3" onClick={links[index]}>
               {icon}
             </Button>
           </motion.div>
         </PopoverHandler>
-        <PopoverContent {...trigger} className="bg-gray-500 text-white rounded-md p-2 border-0">{content}</PopoverContent>
+        <PopoverContent {...trigger} className="bg-gray-500 text-white rounded-md border-none outline-none p-2">{content}</PopoverContent>
       </Popover>
     );
   };
@@ -79,7 +79,7 @@ export default function ContactForm() {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className="flex flex-row bg-gray-600 rounded-tl-lg gap-4 absolute right-0 bottom-0 z-7 px-4"
+      className="flex flex-row bg-gray-600 rounded-tl-lg fixed right-0 bottom-0 z-7"
     >
       {icons.map((icon, i) => test(icon, contents[i], i))}
     </motion.div>
