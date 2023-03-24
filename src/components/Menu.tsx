@@ -10,8 +10,8 @@ export default function SideMenu({ setShowMenu }: { setShowMenu: Function }) {
   };
 
   const [hoverIndex, setHoverIndex] = useState<number>(-1);
-  const labels = ["About", "Work Experience", "Projects", "Contact"];
-  const paths = ["/about", "/work", "/projects", "/contact"];
+  const labels = ["Home", "About", "Work Experience", "Projects", "Contact"];
+  const paths = ["/", "/about", "/work", "/projects", "/contact"];
 
   const createMenuItem = (label: string, index: number) => {
     return (
@@ -37,13 +37,13 @@ export default function SideMenu({ setShowMenu }: { setShowMenu: Function }) {
   };
 
   return (
-    <div className="flex flex-col h-screen w-screen absolute top-0 left-0 z-10 bg-gray-800">
-      <MenuBackground position={hoverIndex} />
+    <div className="flex flex-col h-screen w-screen absolute top-0 left-0 z-10 bg-black">
+      <MenuBackgroundNew position={hoverIndex} />
       <button
-        className="text-5xl text-bold absolute left-0 top-0 ml-20 py-8 hover:scale-110"
+        className="text-5xl text-bold absolute right-[5%] top-[5%] hover:scale-110"
         onClick={() => setShowMenu(false)}
       >
-        <ArrowBackIosIcon className="-mt-2 scale-[1.5]" />
+        {/* <ArrowBackIosIcon className="-mt-2 scale-[1.5]" /> */}
         Back
       </button>
       <div
@@ -56,11 +56,24 @@ export default function SideMenu({ setShowMenu }: { setShowMenu: Function }) {
   );
 }
 
-function MenuBackground({ position }: { position: number }) {
-  const style = `bg-gradient-radial ${
-    position > -1
-      ? `bg-position-${position} bg-extend-45`
-      : "bg-position-def bg-extend-5"
-  } absolute z-9 h-screen w-screen left-0 top-0 transition-all duration-500`;
-  return <div className={style}></div>;
+// no idea why it has to be like this, but its rly buggy with string formatting sooo
+function MenuBackgroundNew({ position }: {position: number}) {
+  if (position === -1) {
+    return <div className="bg-gradient-radial bg-position-def bg-extend-45 absolute z-9 h-screen w-screen left-0 top-0 transition-all duration-500"/>
+  }
+  if (position === 0) {
+    return <div className="bg-gradient-radial bg-position-0 bg-extend-5 absolute z-9 h-screen w-screen left-0 top-0 transition-all duration-500"/>
+  }
+  if (position === 1) {
+    return <div className="bg-gradient-radial bg-position-1 bg-extend-5 absolute z-9 h-screen w-screen left-0 top-0 transition-all duration-500"/>
+  }
+  if (position === 2) {
+    return <div className="bg-gradient-radial bg-position-2 bg-extend-5 absolute z-9 h-screen w-screen left-0 top-0 transition-all duration-500"/>
+  }
+  if (position === 3) {
+    return <div className="bg-gradient-radial bg-position-3 bg-extend-5 absolute z-9 h-screen w-screen left-0 top-0 transition-all duration-500"/>
+  }
+  else {
+    return <div className="bg-gradient-radial bg-position-4 bg-extend-5 absolute z-9 h-screen w-screen left-0 top-0 transition-all duration-500"/>
+  }
 }
