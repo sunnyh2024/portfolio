@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { useNavigate } from "react-router-dom";
 
-export default function SideMenu({ setShowMenu }: { setShowMenu: Function }) {
+export default function MenuNew() {
   const navigate = useNavigate();
   const [toggled, setToggled] = useState(false);
   const changeRoute = (route: string) => {
@@ -28,7 +28,7 @@ export default function SideMenu({ setShowMenu }: { setShowMenu: Function }) {
         <button
           onClick={() => {
             changeRoute(paths[index]);
-            setShowMenu(false);
+            setToggled(false);
           }}
         >
           {label}
@@ -42,7 +42,6 @@ export default function SideMenu({ setShowMenu }: { setShowMenu: Function }) {
       <MenuBackgroundNew position={hoverIndex} />
       <button
         className="text-5xl text-bold absolute right-[5%] top-[5%] hover:scale-110"
-        onClick={() => setShowMenu(false)}
       >
         {/* <ArrowBackIosIcon className="-mt-2 scale-[1.5]" /> */}
         Back
