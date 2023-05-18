@@ -1,10 +1,11 @@
+import Layout from "../components/common/Layout";
 
 export default function AboutPage() {
   return (
-    <div className="bg-black">
+    <Layout title="About Me" showContact={true}>
       <div className="h-screen"> asdf</div>
       <div className="h-screen"> asdf</div>
       test about
-    </div>
+    </Layout>
   )
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useInterval from "../hooks/useInterval";
+import useInterval from "../../hooks/useInterval";
 import { motion } from "framer-motion";
 
 export default function Typewriter({ content, speed, showCursor } : { content: string, speed: number, showCursor: boolean }) {

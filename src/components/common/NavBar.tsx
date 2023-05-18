@@ -3,8 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
 import { AnimatePresence, motion } from "framer-motion";
-import { useAppContext } from "../hooks/useAppContext";
-import { MenuButton } from "./MenuButton";
+import { useAppContext } from "../../hooks/useAppContext";
 
 export default function NavBar({ setShowMenu }: { setShowMenu: Function }) {
   const navigate = useNavigate();
@@ -19,14 +18,9 @@ export default function NavBar({ setShowMenu }: { setShowMenu: Function }) {
         <div className="flex flex-row gap-2 justify-start ml-12 my-5">
           <button
             className="scale-[2.4] hover:scale-[2.7]"
-            onClick={() =>
-              setAppConfig({
-                ...appConfig,
-                theme: appConfig.theme === "light" ? "dark" : "light",
-              })
-            }
+            onClick={() => changeRoute("/")}
           >
-            {appConfig.theme === "dark" ? <WbSunnyIcon /> : <NightsStayIcon />}
+            <WbSunnyIcon />
           </button>
           {/* <button
             className="text-5xl hover:scale-110"
@@ -44,11 +38,13 @@ export default function NavBar({ setShowMenu }: { setShowMenu: Function }) {
           </button>
           <button
             className="scale-[2] hover:scale-[2.2] -mt-2"
-            onClick={() => setShowMenu(true)}
+            onClick={() => {
+              setShowMenu(true);
+              setAppConfig({ ...appConfig, menuOpened: true });
+            }}
           >
-            <MenuIcon style={{ }}/>
+            <MenuIcon style={{}} />
           </button>
-          <MenuButton/>
         </div>
       </div>
     </div>

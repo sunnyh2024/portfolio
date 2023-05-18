@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/Landing";
-import Layout from "./components/Layout";
+import Layout from "./components/common/Layout";
 import AboutPage from "./pages/About";
 import WorkPage from "./pages/Work";
 import ProjectPage from "./pages/Projects";
@@ -13,7 +13,6 @@ function App() {
   return (
     <AppContextProvider>
       <div className="text-white font-mono">
-        <Layout />
         <Routes>
           <Route index element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />

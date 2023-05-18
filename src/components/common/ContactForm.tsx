@@ -76,7 +76,7 @@ export default function ContactForm() {
         </PopoverHandler>
         <PopoverContent
           {...trigger}
-          className="bg-gray-500 text-white rounded-md border-none outline-none p-2"
+          className="bg-gray-800 text-white rounded-md border-none outline-none p-2"
         >
           {content}
         </PopoverContent>

@@ -1,8 +1,9 @@
+import Layout from "../components/common/Layout";
 
 export default function ContactPage() {
   return (
-    <div className="bg-black">
+    <Layout title="Contact" showContact={false}>
       test contact
-    </div>
+    </Layout>
   )
 }
