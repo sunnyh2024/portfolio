@@ -4,8 +4,9 @@ import Background from "./Background";
 import ContactForm from "./ContactForm";
 import Menu from "./Menu";
 import NavBar from "./NavBar";
-import useWindowSize from "../../hooks/useWindowSize";
+import useWindowSize from "../hooks/useWindowSize";
 import { ReactNode } from "react";
+import TextReveal from "./TextReveal";
 
 export default function Layout({
   children,
@@ -28,7 +29,10 @@ export default function Layout({
           animate={{ x: 0 }}
           exit={{ x: -width }}
           transition={{
-            duration: 0.75,
+            duration: 1.25,
+            type: "spring",
+            damping: 25,
+            stiffness: 350,
           }}
           className="z-50"
         >
@@ -43,25 +47,23 @@ export default function Layout({
           transition={{ duration: 0.5, delay: 0.25, ease: "linear" }}
         >
           <NavBar setShowMenu={setShowMenu} />
-          {showContact ? <ContactForm /> : <div />}
+          {showContact && <ContactForm />}
         </motion.div>
       )}
-      <Background>
-        {showMenu ? (
-          <div />
-        ) : (
+      <Background showMenu={showMenu} > 
+        {!showMenu &&
           <motion.div
-            key="work"
+            key="children"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
             className="text-left px-32 py-48"
           >
-            <div className="text-7xl">{title ? title : ""}</div>
+            <TextReveal text={title || ""} style="text-7xl"/>
             {children}
           </motion.div>
-        )}
+        }
       </Background>
     </AnimatePresence>
   );

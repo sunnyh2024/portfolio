@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial' : 'radial-gradient(rgba(255, 255, 255, 0.25) 9%, transparent 15%)'
+        'gradient-radial' : 'radial-gradient(rgba(255, 255, 255, 0.25) 9%, transparent 15%)',
+        'cursor-gradient' : 'radial-gradient(var(--tw-gradient-stops))'
       },
       backgroundSize: {
         'extend-5' : '5vmin 5vmin',

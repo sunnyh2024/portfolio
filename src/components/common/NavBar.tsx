@@ -3,13 +3,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
 import { AnimatePresence, motion } from "framer-motion";
-import { useAppContext } from "../../hooks/useAppContext";
+import { useAppContext } from "../hooks/useAppContext";
+import { useState } from "react";
+import resumePDF from "/spring23.pdf";
 
 export default function NavBar({ setShowMenu }: { setShowMenu: Function }) {
   const navigate = useNavigate();
   const changeRoute = (route: string) => {
     navigate(route);
   };
+  const [modalOpen, setModalOpen] = useState(false);
   const { appConfig, setAppConfig } = useAppContext();
 
   return (
@@ -32,16 +35,14 @@ export default function NavBar({ setShowMenu }: { setShowMenu: Function }) {
         <div className="flex flex-row flex-grow gap-6 justify-end mr-12">
           <button
             className="rounded-full hover:scale-[1.1] p-3"
-            onClick={() => changeRoute("/about")}
+            // onClick={() => setModalOpen(!modalOpen)}
+            onClick={() => window.open(resumePDF)}
           >
             Resume
           </button>
           <button
             className="scale-[2] hover:scale-[2.2] -mt-2"
-            onClick={() => {
-              setShowMenu(true);
-              setAppConfig({ ...appConfig, menuOpened: true });
-            }}
+            onClick={() => setShowMenu(true)}
           >
             <MenuIcon style={{}} />
           </button>
@@ -50,3 +51,4 @@ export default function NavBar({ setShowMenu }: { setShowMenu: Function }) {
     </div>
   );
 }
+

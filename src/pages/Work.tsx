@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useAppContext } from "../hooks/useAppContext";
+import { useAppContext } from "../components/hooks/useAppContext";
 import WorkCard from "../components/WorkCard";
-import WorkMenu from "../components/WorkMenu";
+import SideMenu from "../components/SideMenu";
 import { MenuOpen } from "@mui/icons-material";
 import Layout from "../components/common/Layout";
 
@@ -21,7 +21,7 @@ export default function WorkPage() {
     <Layout title="Work Experience" showContact={true}>
       <div className="flex flex-row mt-20 gap-2 h-[65%]">
         <div className="basis-1/3 z-30 -pl-32 bg-black">
-          <WorkMenu
+          <SideMenu
             projectIndex={projectIndex}
             setProjectIndex={setProjectIndex}
             labels={labels}

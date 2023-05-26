@@ -1,7 +1,6 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
 
-export default function WorkMenu({
+export default function SideMenu({
   projectIndex,
   setProjectIndex,
   labels,
@@ -21,7 +20,7 @@ export default function WorkMenu({
           (hoverIndex === -1 && projectIndex === -1) || 
           hoverIndex === index ||
           projectIndex === index
-            ? "text-white"
+            ? "text-inherit"
             : "text-gray-500"
         } ${projectIndex === index ? "scale-110" : "scale-100"} transition-all`}
         key={index}

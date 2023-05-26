@@ -2,17 +2,16 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { useNavigate } from "react-router-dom";
-import { useAppContext } from "../../hooks/useAppContext";
+import { useAppContext } from "../hooks/useAppContext";
 
 export default function Menu({ setShowMenu }: { setShowMenu: Function }) {
   const navigate = useNavigate();
   const changeRoute = (route: string) => {
     navigate(route);
   };
-  const { appConfig, setAppConfig } = useAppContext();
 
   const [hoverIndex, setHoverIndex] = useState<number>(-1);
-  const labels = ["Home", "About", "Work Experience", "Projects", "Contact"];
+  const labels = ["Home", "About", "Work", "Projects", "Contact"];
   const paths = ["/", "/about", "/work", "/projects", "/contact"];
 
   const createMenuItem = (label: string, index: number) => {
@@ -30,7 +29,6 @@ export default function Menu({ setShowMenu }: { setShowMenu: Function }) {
           onClick={() => {
             changeRoute(paths[index]);
             setShowMenu(false);
-            setAppConfig({ ...appConfig, menuOpened: false });
           }}
         >
           {label}
@@ -43,18 +41,15 @@ export default function Menu({ setShowMenu }: { setShowMenu: Function }) {
     <div className="flex flex-col h-screen w-screen absolute top-0 left-0 bg-black z-50">
       <MenuBackground position={hoverIndex} />
       <button
-        className="text-5xl text-bold absolute right-[5%] top-[5%] hover:scale-110"
-        onClick={() => {
-          setShowMenu(false);
-          setAppConfig({ ...appConfig, menuOpened: false });
-        }}
+        className="text-4xl text-bold absolute right-[6%] top-[6%] hover:scale-110"
+        onClick={() => setShowMenu(false)}
       >
         {/* <ArrowBackIosIcon className="-mt-2 scale-[1.5]" /> */}
         Back
       </button>
       <div
         onMouseLeave={() => setHoverIndex(-1)}
-        className="text-6xl text-bold text-left absolute top-[25%] z-10 ml-20 my-auto space-y-4"
+        className="text-8xl text-bold text-right z-10 absolute right-[5%] top-[15%] space-y-4"
       >
         {labels.map((label, i) => createMenuItem(label, i))}
       </div>

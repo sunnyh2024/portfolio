@@ -4,8 +4,6 @@ export default function AboutPage() {
   return (
     <Layout title="About Me" showContact={true}>
       <div className="h-screen"> asdf</div>
-      <div className="h-screen"> asdf</div>
-      test about
     </Layout>
   )
 }
