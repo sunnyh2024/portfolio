@@ -1,13 +1,16 @@
 import Landing from "./pages/landing/landing";
-import Layout from "./components/layout/layout";
+import Background from "./components/background/background";
 import About from "./pages/about/about";
+import PageLayout from "./components/pageLayout/pageLayout";
 
 function App() {
   return (
-    <Layout>
+    <Background>
       <Landing />
-      <About />
-    </Layout>
+      <PageLayout>
+        <About />
+      </PageLayout>
+    </Background>
   );
 }
 

@@ -20,6 +20,11 @@
   --ginger: #c25317;
 }
 
+body {
+  color: var(--offBlack);
+  background-color: var(--offWhite);
+}
+
 h1 {
   font-size: 5.6em;
   font-family: "Fuzzy Bubbles", serif;
@@ -55,11 +60,5 @@ hr {
 .fuzzy-bubbles-regular {
   font-family: "Fuzzy Bubbles", serif;
   font-weight: 400;
-  font-style: normal;
-}
-
-.fuzzy-bubbles-bold {
-  font-family: "Fuzzy Bubbles", serif;
-  font-weight: 700;
   font-style: normal;
 }

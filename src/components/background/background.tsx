@@ -1,6 +1,6 @@
-import "./layout.css";
+import "./background.css";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Background({ children }: { children: React.ReactNode }) {
   // const { width, height } = useWindowDimensions();
   // const tileSize = 50;
   // const rows = Math.floor(height / tileSize);

@@ -1,0 +1,16 @@
+
+.navbar {
+    position: sticky;
+    top: 40%;
+}
+
+.selected {
+    font-family: "Fuzzy Bubbles", serif;
+    font-size: 5.6rem;
+    font-weight: 300;
+}
+
+.tab {
+    font-family: "Montserrat", serif;
+    font-size: 1.8em;
+}
