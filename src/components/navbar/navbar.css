@@ -1,7 +1,8 @@
 
 .navbar {
-    position: sticky;
-    top: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
 }
 
 .selected {
@@ -12,5 +13,5 @@
 
 .tab {
     font-family: "Montserrat", serif;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }

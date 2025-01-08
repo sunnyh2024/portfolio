@@ -44,3 +44,22 @@
   border-style: solid;
   box-shadow: 10px 10px 0px var(--darkGray);
 }
+
+.nav-button {
+  font-family: "Fuzzy Bubbles", serif;
+  font-size: 1.2em;
+  width: 15rem;
+  height: 3rem;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: var(--offBlack);
+  text-align: center;
+  align-content: center;
+  margin-top: 1rem;
+}
+
+.text {
+  font-family: "Fuzzy Bubbles", serif;
+  font-size: 1.5em;
+}

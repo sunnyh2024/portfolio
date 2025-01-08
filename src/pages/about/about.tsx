@@ -1,9 +1,7 @@
-import "./about.css"
+import "./about.css";
 
 export default function About() {
-    return (
-        <div className="about-container">
-            
-        </div>
-    )
+  return (
+      <div className="infobox peach"></div>
+  );
 }

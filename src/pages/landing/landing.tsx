@@ -1,7 +1,12 @@
 import "./landing.css";
-import Button from "../../components/button/button";
+import resume from "/sunny_huang.pdf";
 
 export default function Landing() {
+
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="container">
       <div className="sub-container">
@@ -21,10 +26,10 @@ export default function Landing() {
         <img src="/pfp.jpg" className="picture" />
       </div>
       <div className="sub-container button-layout">
-        <Button title="about me 🥭" color="peach" />
-        <Button title="experience 🧑🏻‍💻" color="matcha" />
-        <Button title="gallery 🌅" color="lavender" />
-        <Button title="resume 📝" color="sky" />
+        <a href="#about" onClick={() => scrollTo("#about")} className="nav-button peach">about me 🍇</a>
+        <a href="#work" onClick={() => scrollTo("#work")} className="nav-button matcha">experience 🧑🏻‍💻</a>
+        <a href="#gallery" onClick={() => scrollTo("#gallery")} className="nav-button lavender">gallery 🌅</a>
+        <a href={resume} target="_blank" className="nav-button sky">resume 📝</a>
       </div>
     </div>
   );
