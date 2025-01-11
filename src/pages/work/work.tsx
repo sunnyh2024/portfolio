@@ -1,9 +1,10 @@
-import "./work.css"
+import InfoBox from "../../components/infobox/infobox";
+import "./work.css";
 
 export default function Work() {
-    return (
-        <div className="infobox matcha">
-            
-        </div>
-    )
+  return (
+    <InfoBox color="matcha">
+      <div>test</div>
+    </InfoBox>
+  );
 }

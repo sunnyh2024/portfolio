@@ -1,7 +1,10 @@
+import InfoBox from "../../components/infobox/infobox";
 import "./projects.css";
 
 export default function Projects() {
   return (
-      <div className="infobox sky"></div>
+    <InfoBox color="sky">
+    <div>test</div>
+  </InfoBox>
   );
 }

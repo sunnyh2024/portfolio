@@ -1,7 +1,10 @@
+import InfoBox from "../../components/infobox/infobox";
 import "./gallery.css";
 
 export default function Gallery() {
   return (
-      <div className="infobox lavender"></div>
+    <InfoBox color="lavender">
+      <div>test</div>
+    </InfoBox>
   );
 }
