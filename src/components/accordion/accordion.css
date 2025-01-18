@@ -1,0 +1,26 @@
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.accordion-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 2px;
+    height: 18rem;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.bullets {
+    margin-left: -1rem;
+}

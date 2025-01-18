@@ -17,8 +17,12 @@ export default function Landing() {
             skills. welcome!
           </p>
           <div className="icons-layout">
-            <img src="/github.svg" className="icon" />
-            <img src="/linkedin.svg" className="icon" />
+            <a href="https://www.github.com/sunnyh2024">
+              <img src="/github.svg" className="icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/sunnyh2024/">
+              <img src="/linkedin.svg" className="icon" />
+            </a>
           </div>
         </div>
         <hr className="line" />

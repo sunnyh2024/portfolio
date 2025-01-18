@@ -30,17 +30,17 @@ export default function About() {
             <p>💼 - Capital One</p>
           </li>
           <li>
-            <p>🤗 - I love noodles and fruit!</p>
+            <p>🤗 - Fun fact: I love noodles and fruit!</p>
           </li>
         </ul>
-        <img src="/about_pic.jpg" className="picture with-border" />
+        <img src="/about_pic.jpg" className="picture light-border" />
       </div>
       <div>
         <h2>Skills</h2>
         <p>
           I try to stay curious, and am always open to learning something new.
           I’m currently pursuing an AWS Solutions Architect Certification and
-          using Figma to learn more about design. I want to continue
+          using Figma to learn more about design. The goal is to continue
           diversifying my work experiences and figuring out what I enjoy.
           <br />
           <br />

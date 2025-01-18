@@ -4,17 +4,16 @@
   align-items: center;
   justify-content: space-between;
   height: 85vh;
-  width: 40vw;
-  margin: 3rem;
+  width: 45vw;
+  margin-bottom: 4rem;
+  margin-right: 2rem;
   padding: 2rem;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 .infobox-layout {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: space-between;
   text-align: left;
   height: 100%;
   width: 100%;

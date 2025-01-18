@@ -130,6 +130,14 @@ h3 {
   color: var(--offBlack);
 }
 
+h4 {
+  font-family: "Montserrat", serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  margin: 0;
+  color: var(--offBlack);
+}
+
 p {
   font-family: "Roboto Condensed", serif;
   font-size: 1.3em;
@@ -161,6 +169,13 @@ hr {
   border-style: solid;
   border-color: var(--offBlack);
   border-width: 2px;
+  border-radius: 10px;
+}
+
+.light-border {
+  border-style: solid;
+  border-color: var(--offBlack);
+  border-width: 1px;
   border-radius: 10px;
 }
 
