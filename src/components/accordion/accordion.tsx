@@ -62,7 +62,7 @@ export default function Accordion() {
         <div
           key={index}
           onClick={() => toggleIndex(index)}
-          className="light-border accordion-item shadow-forest"
+          className="accordion-item shadow-forest light-border"
         >
           <div className="accordion-header">
             <h3>{item.title}</h3>
