@@ -22,7 +22,7 @@ export default function GalleryCard({
         <img src={source} className="gallery-image shadow-grape light-border" />
       </div>
       {hover && (
-        <div className="pic-infobox">
+        <div className="pic-infobox light-border">
           <p className="pic-info">
             📍 - {location}
             <br />

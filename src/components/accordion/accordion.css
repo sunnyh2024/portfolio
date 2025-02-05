@@ -15,12 +15,7 @@
 }
 
 .content {
-    margin-top: 2px;
     height: 18rem;
     overflow: auto;
     scrollbar-width: none;
-}
-
-.bullets {
-    margin-left: -1rem;
 }

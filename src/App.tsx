@@ -7,6 +7,7 @@ import { useMotionValueEvent, useScroll } from "motion/react";
 import { useLocation, useNavigate } from "react-router-dom";
 import useWindowDimensions from "./hooks/useWindowDimensions";
 import Layout from "./components/pageLayout/layout";
+import Footer from "./components/footer/footer";
 
 function App() {
   const { scrollY } = useScroll();
@@ -46,25 +47,26 @@ function App() {
   });
 
   return (
-      <div>
-        <div id="#home">
-          <Landing />
-        </div>
-        <Layout>
-          <div id="#about">
-            <About />
-          </div>
-          <div id="#work">
-            <Work />
-          </div>
-          <div id="#projects">
-            <Projects />
-          </div>
-          <div id="#gallery">
-            <Gallery />
-          </div>
-        </Layout>
+    <div>
+      <div id="#home">
+        <Landing />
       </div>
+      <Layout>
+        <div id="#about">
+          <About />
+        </div>
+        <div id="#work">
+          <Work />
+        </div>
+        <div id="#projects">
+          <Projects />
+        </div>
+        <div id="#gallery">
+          <Gallery />
+        </div>
+      </Layout>
+      <Footer />
+    </div>
   );
 }
 

@@ -1,9 +1,7 @@
 .gallery-card {
   display: grid;
-  width: auto;
-  height: 20rem;
-  margin-right: 2rem;
   margin-bottom: 2rem;
+  padding-right: 2rem;
 }
 
 .gallery-card > * {
@@ -12,18 +10,15 @@
 }
 
 .gallery-image {
-  height: 20rem;
-  width: auto;
+  max-height: 20rem;
 }
 
 .pic-infobox {
   display: flex;
-  height: 100%;
-  max-width: 100%;
+  max-height: 20rem;
   background-color: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
 }
 
 .pic-info {
