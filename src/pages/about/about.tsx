@@ -12,8 +12,8 @@ export default function About() {
         Cyber division. Outside of work, I enjoy rock climbing, traveling, and
         listening to music (I love Niki and am getting into k-pop too). This
         past summer, I made a long overdue trip to Asia to visit family, which
-        got me into tea, and now I’m trying to experiment with different oat
-        milks to make matcha lattes.
+        got me into all sorts of tea, and now I’m trying to experiment with
+        different oat milks to make the best matcha latte.
       </p>
       <div className="about-sublayout">
         <ul>
@@ -38,9 +38,9 @@ export default function About() {
       <div>
         <h2>Skills</h2>
         <p>
-          I try to stay curious, and am always open to learning something new.
-          I’m currently pursuing an AWS Solutions Architect Certification and
-          using Figma to learn more about design. The goal is to continue
+          I try to stay curious, and am always open to learning something new. I
+          am a newly certified AWS Solutions Architect, and I am also using
+          Figma to learn more about design. My current goal is to continue
           diversifying my work experiences and figuring out what I enjoy.
           <br />
           <br />

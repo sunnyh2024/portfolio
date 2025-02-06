@@ -15,7 +15,6 @@
 }
 
 .content {
-    height: 18rem;
     overflow: auto;
     scrollbar-width: none;
 }

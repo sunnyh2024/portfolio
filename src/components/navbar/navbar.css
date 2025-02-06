@@ -16,9 +16,3 @@
     font-size: 1.5em;
     line-height: 1.4;
 }
-
-.tab:hover {
-    transform: scale(1.15);
-    transform-origin: 0% 10%;
-    font-weight: 400;
-}

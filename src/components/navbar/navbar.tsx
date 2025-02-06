@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./navbar.css";
 import { useLocation } from "react-router-dom";
+import { motion } from "motion/react";
 
 export default function Navbar() {
   const [selected, setSelected] = useState(0);
@@ -27,13 +28,15 @@ export default function Navbar() {
   return (
     <div className="navbar">
       {tabs.map((tab, index) => (
-        <a
+        <motion.a
           className={`${selected === index ? "selected" : "tab"}`}
           onClick={() => onClick(index)}
           href={hrefs[index]}
+          whileHover={{ scale: 1.1 }}
+          // whileTap={{ scale: 0.95 }}
         >
           {`${tab} ${selected === index ? selectedEmojis[index] : ""}`}
-        </a>
+        </motion.a>
       ))}
     </div>
   );

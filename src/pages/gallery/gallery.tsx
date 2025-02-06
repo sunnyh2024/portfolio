@@ -88,7 +88,7 @@ export default function Gallery() {
 
   return (
     <InfoBox color="lavender">
-      <h3>some fun photos i've taken!</h3>
+      <h3>bonus travel photos!</h3>
       <div className="gallery-layout">
         <div className="gallery-row">
           {topPics.map((pic, index) => (

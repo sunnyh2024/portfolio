@@ -1,7 +1,15 @@
 import { useState } from "react";
 import "./accordion.css";
 
-export default function Accordion({items, background}: {items: {title: string, duration: string, content: React.ReactNode}[], background: 'forest' | 'grape' | 'ginger' | 'ocean' | 'sky'}) {
+export default function Accordion({
+  items,
+  background,
+  height,
+}: {
+  items: { title: string; duration: string; content: React.ReactNode }[];
+  background: "forest" | "grape" | "ginger" | "ocean" | "sky";
+  height: string;
+}) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   const toggleIndex = (index: number) => {
@@ -21,8 +29,8 @@ export default function Accordion({items, background}: {items: {title: string, d
             <h4>{item.duration}</h4>
           </div>
           {activeIndex === index && (
-            <div className="content">
-                {item.content}
+            <div className="content" style={{ height: height }}>
+              {item.content}
             </div>
           )}
         </div>
