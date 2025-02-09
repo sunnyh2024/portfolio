@@ -1,3 +1,4 @@
+import Icon from "../../components/icon/icon";
 import "./landing.css";
 import resume from "/sunny_huang.pdf";
 import { motion } from "motion/react";
@@ -11,21 +12,29 @@ export default function Landing() {
     <div className="container">
       <div className="sub-container">
         <div>
-          <h3>
-            <motion.span className="sun-icon" whileTap={{rotate: 3}}>☀️</motion.span> hey! i’m{" "}
-          </h3>
+          <div className="intro">
+            <motion.div
+              whileHover={{
+                rotate: [null, 360],
+                transition: {
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "linear",
+                },
+              }}
+            >
+              <h3 className="sun-icon">☀️</h3>
+            </motion.div>
+            <h3 style={{paddingLeft: "12px"}}>hey! i’m</h3>
+          </div>
           <h1>SUNNY HUANG</h1>
           <p>
             a fullstack and automation engineer trying to improve my design
-            skills. welcome!
+            skills
           </p>
           <div className="icons-layout">
-            <a href="https://www.github.com/sunnyh2024">
-              <img src="/github.svg" className="icon" />
-            </a>
-            <a href="https://www.linkedin.com/in/sunnyh2024/">
-              <img src="/linkedin.svg" className="icon" />
-            </a>
+            <Icon link="https://www.github.com/sunnyh2024/portfolio" name="github" />
+            <Icon link="https://www.linkedin.com/in/sunnyh2024/" name="linkedin" />
           </div>
         </div>
         <hr className="line" />
@@ -45,6 +54,7 @@ export default function Landing() {
           onClick={() => scrollTo("#work")}
           className="nav-button matcha with-border"
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
           experience 🧑🏻‍💻
         </motion.a>
@@ -53,6 +63,7 @@ export default function Landing() {
           onClick={() => scrollTo("#gallery")}
           className="nav-button lavender with-border"
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
           gallery 🌅
         </motion.a>

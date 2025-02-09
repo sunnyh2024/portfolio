@@ -32,8 +32,8 @@ export default function Navbar() {
           className={`${selected === index ? "selected" : "tab"}`}
           onClick={() => onClick(index)}
           href={hrefs[index]}
+          style={{transformOrigin: "left"}}
           whileHover={{ scale: 1.1 }}
-          // whileTap={{ scale: 0.95 }}
         >
           {`${tab} ${selected === index ? selectedEmojis[index] : ""}`}
         </motion.a>

@@ -1,4 +1,5 @@
 import Accordion from "../../components/accordion/accordion";
+import Icon from "../../components/icon/icon";
 import InfoBox from "../../components/infobox/infobox";
 import "./projects.css";
 
@@ -8,7 +9,7 @@ export default function Projects() {
       title: "Portfolio",
       duration: "Oct 2024 - Present",
       content: (
-        <div className="project-content">
+        <div style={{marginTop: "4px"}}>
           <p>
             This is the first major project I've done since graduation! While
             the main purpose of this website is to show off my previous
@@ -25,9 +26,7 @@ export default function Projects() {
               <p>Frontend: React + Vite, TypeScript, Framer Motion</p>
             </li>
           </ul>
-          <a href="https://www.github.com/sunnyh2024/portfolio">
-            <img src="/github.svg" className="icon" />
-          </a>
+          <Icon link="https://www.github.com/sunnyh2024/portfolio" name="github" />
         </div>
       ),
     },
@@ -57,16 +56,14 @@ export default function Projects() {
               </p>
             </li>
           </ul>
-          <a href="https://www.github.com/sunnyh2024/portfolio">
-            <img src="/github.svg" className="icon" />
-          </a>
+          <Icon link="https://github.com/sunnyh2024/CS4120-Final-Project" name="github" />
         </div>
       ),
     },
   ];
   return (
     <InfoBox color="sky">
-      <Accordion items={items} background="ocean" height="20rem" />
+      <Accordion items={items} background="ocean" height="22rem" />
       <h3 className="subtext">... and more on the way!</h3>
     </InfoBox>
   );

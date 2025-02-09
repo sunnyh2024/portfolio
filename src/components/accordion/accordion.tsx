@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./accordion.css";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function Accordion({
   items,
@@ -28,11 +29,23 @@ export default function Accordion({
             <h3>{item.title}</h3>
             <h4>{item.duration}</h4>
           </div>
-          {activeIndex === index && (
-            <div className="content" style={{ height: height }}>
-              {item.content}
-            </div>
-          )}
+          <AnimatePresence>
+            {activeIndex === index && (
+              <motion.div
+                className="content"
+                initial="collapsed"
+                animate="open"
+                exit="collapsed"
+                variants={{
+                  open: { opacity: 1, height: height },
+                  collapsed: { opacity: 0, height: 0 },
+                }}
+                transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+              >
+                {item.content}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       ))}
     </div>

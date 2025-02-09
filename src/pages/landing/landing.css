@@ -22,6 +22,11 @@
   margin-top: 1rem;
 }
 
+.sun-icon:hover {
+  scale: 1.25;
+  transition-duration: 300ms;
+}
+
 .button-layout {
   display: flex;
   flex-wrap: wrap;
@@ -48,4 +53,9 @@
 .text {
   font-family: "Fuzzy Bubbles", serif;
   font-size: 1.5em;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
 }
