@@ -9,12 +9,14 @@ export default function Projects() {
       title: "Portfolio",
       duration: "Oct 2024 - Present",
       content: (
-        <div style={{marginTop: "4px"}}>
+        <div style={{ marginTop: "4px" }}>
           <p>
             This is the first major project I've done since graduation! While
             the main purpose of this website is to show off my previous
             experiences, I am also using this opportunity to learn more about
-            design and animation using Figma and Framer Motion
+            design and animation using Figma and Framer Motion. This is still a
+            work in progress, so bear with as I iron out some UI bugs and make
+            enhancements over the next few months :)
           </p>
           <br />
           <p className="tech-stack">Tech Stack</p>
@@ -23,10 +25,13 @@ export default function Projects() {
               <p>Backend: No backend 🤪</p>
             </li>
             <li>
-              <p>Frontend: React + Vite, TypeScript, Framer Motion</p>
+              <p>Frontend: React + Vite, CSS, TypeScript, Framer Motion</p>
             </li>
           </ul>
-          <Icon link="https://www.github.com/sunnyh2024/portfolio" name="github" />
+          <Icon
+            link="https://www.github.com/sunnyh2024/portfolio"
+            name="github"
+          />
         </div>
       ),
     },
@@ -56,7 +61,10 @@ export default function Projects() {
               </p>
             </li>
           </ul>
-          <Icon link="https://github.com/sunnyh2024/CS4120-Final-Project" name="github" />
+          <Icon
+            link="https://github.com/sunnyh2024/CS4120-Final-Project"
+            name="github"
+          />
         </div>
       ),
     },

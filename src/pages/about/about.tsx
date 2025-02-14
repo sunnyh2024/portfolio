@@ -17,10 +17,11 @@ export default function About() {
         graduated from Northeastern University in May 2024. I’m currently a
         software engineer at Capital One, where I automate workflows for the
         Cyber division. Outside of work, I enjoy rock climbing, traveling, and
-        listening to music (I love Niki and am getting into k-pop too). This
-        past summer, I made a long overdue trip to Asia to visit family, which
-        got me into all sorts of tea, and now I’m trying to experiment with
-        different oat milks to make the best matcha latte.
+        listening to music (listening to a lot of 88rising Niki, k-pop, and
+        house right now). This past summer, I made a long overdue trip to Asia
+        to visit family, which got me into all sorts of tea. I’m currently
+        trying to experiment with different oat milks to make the best matcha
+        latte, but I have a lot more tea sitting on my shelf to try out!
       </p>
       <div
         style={{
@@ -45,8 +46,8 @@ export default function About() {
           I try to stay curious, and am always open to learning something new. I
           am a newly certified AWS Solutions Architect, and I am also
           experimenting with Figma to learn more about design. My current goal
-          is to continue diversifying my work experiences and figuring out what
-          I enjoy.
+          for these next couple years is to continue diversifying my work
+          experiences and figuring out what I enjoy doing.
           <br />
           <br />
           Languages - Python, Javascript/Typescript, Java, Golang, Kotlin, C

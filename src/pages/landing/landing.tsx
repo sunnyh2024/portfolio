@@ -8,6 +8,8 @@ export default function Landing() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const email = "sunnyshuang.2020@gmail.com"
+
   return (
     <div className="container">
       <div className="sub-container">
@@ -33,8 +35,12 @@ export default function Landing() {
             skills
           </p>
           <div className="icons-layout">
-            <Icon link="https://www.github.com/sunnyh2024/portfolio" name="github" />
-            <Icon link="https://www.linkedin.com/in/sunnyh2024/" name="linkedin" />
+            <Icon link="https://www.github.com/sunnyh2024/portfolio" name="github"/>
+            <Icon link="https://www.linkedin.com/in/sunnyh2024/" name="linkedin"/>
+            <motion.div whileHover={{scale: 1.1}} onClick={() => {
+              navigator.clipboard.writeText(email);
+              alert(`Copied ${email} to clipboard!`);
+            }}><img src={`/email.svg`} alt={`email icon`} /></motion.div>
           </div>
         </div>
         <hr className="line" />

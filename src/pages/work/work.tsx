@@ -14,9 +14,9 @@ export default function Work() {
       "Designed and developed a fullstack NextJS/Typescript application for an internal hackathon that adds playlist history and collaboration to Spotify, placing 4th out of 36 teams",
     ],
     amazonRobotics: [
-      "Designed and developed a version control tool for partner teams to maintain a history of S2P simulation files ran with different parameters using Python",
-      "Leveraged Jenkins and ETX to create CI/CD pipelines for the signal integrity GitHub repository",
-      "Maintained a Python script that analyzes and visualizes data from signal integrity simulations, providing routine updates and visualizations for over 50+ files across the organization",
+      "Maintained and updated an application for Fulfillment Center workers to report issues and mechanical failures, performing bug fixes and optimizing performance",
+      "Redesigned the ticket intake process of the application above using React/Javascript, allowing users to create their own custom intake workflows and used Jest to ensure 80% test coverage",
+      "Implemented and tested AWS Lambda functions to fetch employee data from an internal API and application icons from AWS S3 to be displayed upon user login",
     ],
     amd: [
       "Designed and developed a version control tool for partner teams to maintain a history of S2P simulation files ran with different parameters using Python",
