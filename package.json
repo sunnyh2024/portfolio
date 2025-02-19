@@ -2,9 +2,12 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://sunnyh2024.github.io/portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
