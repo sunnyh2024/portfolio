@@ -40,11 +40,11 @@ export default function Landing() {
             <motion.div whileHover={{scale: 1.1}} onClick={() => {
               navigator.clipboard.writeText(email);
               alert(`Copied ${email} to clipboard!`);
-            }}><img src={`/email2.svg`} alt={`email icon`} /></motion.div>
+            }}><img src={`email2.svg`} alt={`email icon`} /></motion.div>
           </div>
         </div>
         <hr className="line" />
-        <img src="/pfp.jpg" className="picture with-border" />
+        <img src="pfp.jpg" className="picture with-border" />
       </div>
       <div className="sub-container button-layout">
         <motion.a

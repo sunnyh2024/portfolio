@@ -8,7 +8,7 @@ export default function Icon({ link, name }: { link: string; name: string }) {
       rel="noopener noreferrer"
       whileHover={{ scale: 1.1 }}
     >
-      <img src={`/${name}.svg`} alt={`${name} icon`} />
+      <img src={`${name}.svg`} alt={`${name} icon`} />
     </motion.a>
   );
 }

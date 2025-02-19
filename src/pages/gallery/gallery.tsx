@@ -94,7 +94,7 @@ export default function Gallery() {
           {topPics.map((pic, index) => (
             <GalleryCard
               key={index}
-              source={`/gallery/${pic.label}.jpg`}
+              source={`gallery/${pic.label}.jpg`}
               location={pic.location}
               camera={pic.camera}
             />
@@ -104,7 +104,7 @@ export default function Gallery() {
           {bottomPics.map((pic, index) => (
             <GalleryCard
               key={index}
-              source={`/gallery/${pic.label}.jpg`}
+              source={`gallery/${pic.label}.jpg`}
               location={pic.location}
               camera={pic.camera}
             />

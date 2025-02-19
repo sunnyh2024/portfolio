@@ -38,7 +38,7 @@ export default function About() {
             </li>
           ))}
         </ul>
-        <img src="/about_pic.jpg" className="picture light-border" />
+        <img src="about_pic.jpg" className="picture light-border" />
       </div>
       <div>
         <h2>Skills</h2>
