@@ -164,12 +164,6 @@ hr {
   color: var(--offBlack);
 }
 
-.fuzzy-bubbles-regular {
-  font-family: "Fuzzy Bubbles", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .with-border {
   border-style: solid;
   border-color: var(--offBlack);

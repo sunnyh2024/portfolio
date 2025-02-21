@@ -10,6 +10,20 @@
     justify-content: start;
 }
 
-.link {
-    
+.fuzzy-bubbles-regular {
+    font-family: "Fuzzy Bubbles", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montserrat-regular {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-condensed-regular {
+    font-family: "Roboto Condensed", serif;
+    font-weight: 400;
+    font-style: normal;
 }
